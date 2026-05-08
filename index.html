@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>NEXUSWAY | Produtos de Software para Operacao Real</title>
+    <meta name="description"
+        content="A NEXUSWAY desenvolve produtos de software para operacao empresarial com foco em performance, escalabilidade e implementacao pratica.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-shell" aria-hidden="true">
+        <canvas id="ambient-canvas"></canvas>
+        <div class="background-glow"></div>
+        <div class="background-texture"></div>
+        <div class="background-vignette"></div>
+    </div>
+
+    <header class="site-header" id="inicio">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="NEXUSWAY">
+                <img src="logo.png" alt="Logo NEXUSWAY" class="brand-logo">
+                <span class="brand-name">NEXUS<span class="highlight">WAY</span></span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="#programas">Programas</a>
+                <a href="#petway">PetWay</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a class="btn btn-outline header-cta" href="#contato">Agendar conversa</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Arquitetura de software + produtos SaaS</span>
+                    <h1>Plataforma de programas para empresas que precisam de operacao mais eficiente.</h1>
+                    <p>
+                        Estruturamos um ecossistema de produtos conectados para automatizar a rotina, reduzir erro
+                        manual e dar previsibilidade para crescimento.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#petway">Conhecer o PetWay</a>
+                        <a class="btn btn-ghost" href="#programas">Ver portfolio</a>
+                    </div>
+                </div>
+
+                <div class="hero-panel surface-card">
+                    <h2>Direção do ecossistema NEXUSWAY</h2>
+                    <ul>
+                        <li><i data-lucide="check-circle-2"></i><span>Produtos verticais para operação local e
+                                multiunidade</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Base técnica e única para acelerar novos
+                                programas</span></li>
+                        <li><i data-lucide="check-circle-2"></i><span>Implementação assistida com foco em uso
+                                real</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container stats-grid">
+                <article class="stat surface-card">
+                    <strong>1o programa em operacao</strong>
+                    <span>PetWay em evolucao continua.</span>
+                </article>
+                <article class="stat surface-card">
+                    <strong>1 programa no pipeline</strong>
+                    <span>Produto ja definido para o proximo ciclo.</span>
+                </article>
+                <article class="stat surface-card">
+                    <strong>Arquitetura pronta para escalar</strong>
+                    <span>Padrao tecnico replicavel para novos mercados.</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="programas">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Portfólio de programas</span>
+                    <h2>Um bloco dedicado para cada produto que sera construido</h2>
+                    <p>O PetWay e o primeiro programa ativo. Os proximos modulos ja estao planejados para entrar no
+                        ecossistema com o mesmo padrao de qualidade.</p>
+                </div>
+
+                <div class="program-grid">
+                    <article class="program-card surface-card featured-program" id="programa-petway">
+                        <div class="program-top">
+                            <h3>PetWay</h3>
+                            <span class="status-chip live">Ativo</span>
+                        </div>
+                        <p>Gestao completa para pet shops, com operacao comercial, financeiro e atendimento em uma unica
+                            base.</p>
+                        <div class="program-gallery">
+                            <button class="program-photo" type="button" data-caption="PetWay - Dashboard de Negócios">
+                                <img src="/programas/petway-dashboard.png" alt="PetWay Dashboard" loading="lazy">
+                            </button>
+                            <button class="program-photo" type="button" data-caption="PetWay - Frente de Loja (PDV)">
+                                <img src="/programas/petway-pdv.png" alt="PetWay PDV" loading="lazy">
+                            </button>
+                            <button class="program-photo" type="button" data-caption="PetWay - Agenda Central">
+                                <img src="/programas/petway-agenda.png" alt="PetWay Agenda" loading="lazy">
+                            </button>
+                        </div>
+                        <p class="gallery-hint">Clique nas fotos para ampliar.</p>
+                        <ul>
+                            <li>Vendas, caixa e controle diario</li>
+                            <li>Cadastro de clientes e pets</li>
+                            <li>Suporte e implantacao assistida</li>
+                        </ul>
+                    </article>
+
+                    <article class="program-card surface-card">
+                        <div class="program-top">
+                            <h3>NEXUS COMMERCE</h3>
+                            <span class="status-chip live">Em produção</span>
+                        </div>
+                        <p>Plataforma para varejo com foco em margem, reposicao e padronizacao de operacao entre lojas.
+                        </p>
+                        <div class="program-gallery">
+                            <button class="program-photo" type="button"
+                                data-caption="NEXUS COMMERCE - Controle de estoque">
+                                <img src="/programas/nexus-commerce-estoque.svg"
+                                    alt="NEXUS COMMERCE controle de estoque" loading="lazy">
+                            </button>
+                            <button class="program-photo" type="button"
+                                data-caption="NEXUS COMMERCE - Resultados por unidade">
+                                <img src="/programas/nexus-commerce-financeiro.svg"
+                                    alt="NEXUS COMMERCE resultados por unidade" loading="lazy">
+                            </button>
+                        </div>
+                        <p class="gallery-hint">Clique nas fotos para ampliar.</p>
+                        <ul>
+                            <li>Estoque e reposicao por giro</li>
+                            <li>Painel de resultado por unidade</li>
+                            <li>Fluxo financeiro integrado</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="petway">
+            <div class="container petway-grid">
+                <div>
+                    <div class="section-head left">
+                        <span class="eyebrow">Produto em destaque</span>
+                        <h2>PetWay: controle real da operacao do seu pet shop</h2>
+                        <p>Da recepcao ao fechamento de caixa, o PetWay organiza o processo inteiro em uma experiencia
+                            unica e simples para o time.</p>
+                    </div>
+
+                    <div class="petway-points surface-card">
+                        <div class="point"><i data-lucide="shield-check"></i><span>Padrao de uso simples para reduzir
+                                erro manual</span></div>
+                        <div class="point"><i data-lucide="monitor"></i><span>Licenca por comercio com ate 2
+                                computadores inclusos</span></div>
+                        <div class="point"><i data-lucide="messages-square"></i><span>Suporte direto para implantacao e
+                                rotina operacional</span></div>
+                    </div>
+                </div>
+
+                <div class="pricing surface-card" id="planos">
+                    <h3>Planos PetWay</h3>
+                    <div class="price-list">
+                        <article class="price-item">
+                            <div>
+                                <strong>Mensal</strong>
+                                <p>R$ 180 por mes</p>
+                            </div>
+                            <button class="btn btn-ghost btn-select" data-plan="MENSAL"
+                                type="button">Selecionar</button>
+                        </article>
+
+                        <article class="price-item featured-price">
+                            <div>
+                                <strong>Anual</strong>
+                                <p>R$ 1.980 por ano</p>
+                            </div>
+                            <button class="btn btn-primary btn-select" data-plan="ANUAL"
+                                type="button">Selecionar</button>
+                        </article>
+
+                        <article class="price-item">
+                            <div>
+                                <strong>Permanente</strong>
+                                <p>R$ 7.000 licenca vitalicia</p>
+                            </div>
+                            <button class="btn btn-ghost btn-select" data-plan="PERMANENTE"
+                                type="button">Selecionar</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="roadmap">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Roadmap de expansao</span>
+                    <h2>Crescimento planejado por etapas</h2>
+                </div>
+                <div class="roadmap-grid">
+                    <article class="roadmap-step surface-card">
+                        <span>Etapa 01</span>
+                        <h3>PetWay</h3>
+                        <p>Melhorias continuas, estabilidade de base e ganho de tracao comercial.</p>
+                    </article>
+                    <article class="roadmap-step surface-card">
+                        <span>Etapa 02</span>
+                        <h3>NEXUS COMMERCE</h3>
+                        <p>Expansao para varejo com foco em padronizacao de operacao e resultado.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="container contact-grid">
+                <article class="surface-card contact-info">
+                    <span class="eyebrow">Contato</span>
+                    <h2>Vamos planejar seu proximo passo</h2>
+                    <p>Se voce quer implantar o PetWay agora ou acompanhar os proximos programas, fale direto com a
+                        equipe.</p>
+                    <ul>
+                        <li><i data-lucide="mail"></i><span>contato@nexusway.com.br</span></li>
+                        <li><i data-lucide="message-circle"></i><span>(67) 9 9141-3940</span></li>
+                        <li><i data-lucide="map-pin"></i><span>Atendimento: Três Lagoas, Inocência, Brasilândia e Bataguassu (Remoto)</span></li>
+                    </ul>
+                </article>
+
+                <article class="surface-card contact-form">
+                    <h3>Solicitar contato via WhatsApp</h3>
+                    <form id="nexusway-form">
+                        <div class="field">
+                            <label for="product-select">Produto de interesse</label>
+                            <select id="product-select" name="produto" required>
+                                <option value="" disabled selected>Selecione o produto</option>
+                                <option value="PetWay">PetWay</option>
+                                <option value="NEXUS COMMERCE" disabled>NEXUS COMMERCE (Em breve)</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="plan-select">Plano de interesse</label>
+                            <select id="plan-select" name="plano" required>
+                                <option value="" disabled selected>Selecione um plano</option>
+                                <option value="MENSAL">Plano Mensal - R$ 180</option>
+                                <option value="ANUAL">Plano Anual - R$ 1.980</option>
+                                <option value="PERMANENTE">Plano Permanente - R$ 7.000</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="resp-name">Nome do responsavel</label>
+                            <input type="text" id="resp-name" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="com-name">Nome do comercio</label>
+                            <input type="text" id="com-name" name="comercio" placeholder="Ex: Pet Shop Central"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" id="address" name="endereco" placeholder="Rua, Numero, Bairro" required>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="wa-num">WhatsApp</label>
+                                <input type="tel" id="wa-num" name="whatsapp" placeholder="(00) 00000-0000" required>
+                            </div>
+                            <div class="field">
+                                <label for="city-select">Cidade de atendimento</label>
+                                <select id="city-select" name="cidade" required>
+                                    <option value="Três Lagoas/MS">Três Lagoas/MS</option>
+                                    <option value="Inocência/MS">Inocência/MS</option>
+                                    <option value="Brasilândia/MS">Brasilândia/MS</option>
+                                    <option value="Bataguassu/MS (Remoto)">Bataguassu/MS (Remoto)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">Enviar solicitacao</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> NEXUSWAY. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="program-lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar visualizacao">
+            <i data-lucide="x"></i>
+        </button>
+        <figure class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
