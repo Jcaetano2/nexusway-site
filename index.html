@@ -28,7 +28,7 @@
 
     <header class="site-header" id="inicio">
         <div class="container header-inner">
-            <a class="brand" href="#inicio" aria-label="NEXUSWAY">
+            <a class="brand" href="#" aria-label="NEXUSWAY">
                 <img src="logo.png" alt="Logo NEXUSWAY" class="brand-logo">
                 <span class="brand-name">NEXUS<span class="highlight">WAY</span></span>
             </a>
@@ -38,9 +38,17 @@
             </button>
 
             <nav class="main-nav" id="main-nav">
-                <a href="#programas">Programas</a>
-                <a href="#petway">PetWay</a>
-                <a href="#roadmap">Roadmap</a>
+                <a href="#">Início</a>
+                <a href="#sobre">Sobre Nós</a>
+                <div class="nav-item-dropdown">
+                    <a href="#programas" class="dropdown-toggle">Sistemas <i data-lucide="chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#programa-petway">PetWay</a>
+                        <a href="#programas">Todos os Sistemas</a>
+                    </div>
+                </div>
+                <a href="#servicos">Serviços de TI</a>
+                <a href="#planos">Planos</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -49,49 +57,82 @@
     </header>
 
     <main>
-        <section class="hero section">
+        <section class="hero section" id="inicio">
             <div class="container hero-grid">
                 <div>
-                    <span class="eyebrow">Arquitetura de software + produtos SaaS</span>
-                    <h1>Plataforma de programas para empresas que precisam de operação mais eficiente.</h1>
+                    <span class="eyebrow">Parceiro Tecnológico Completo</span>
+                    <h1>Soluções inteligentes em tecnologia e desenvolvimento.</h1>
                     <p>
-                        Estruturamos um ecossistema de produtos conectados para automatizar a rotina, reduzir erro
-                        manual e dar previsibilidade para crescimento.
+                        A NEXUSWAY oferece suporte técnico especializado para manter sua empresa rodando e desenvolve produtos de software focados em escalabilidade e previsibilidade.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="#petway">Conhecer o PetWay</a>
-                        <a class="btn btn-ghost" href="#programas">Ver portfólio</a>
+                        <a class="btn btn-primary" href="#servicos">Suporte de TI</a>
+                        <a class="btn btn-ghost" href="#programas">Conhecer Sistemas</a>
                     </div>
                 </div>
 
                 <div class="hero-panel surface-card">
-                    <h2>Direção do ecossistema NEXUSWAY</h2>
+                    <h2>Nossas frentes de atuação</h2>
                     <ul>
-                        <li><i data-lucide="check-circle-2"></i><span>Produtos verticais para operação local e
-                                multiunidade</span></li>
-                        <li><i data-lucide="check-circle-2"></i><span>Base técnica e única para acelerar novos
-                                programas</span></li>
-                        <li><i data-lucide="check-circle-2"></i><span>Implementação assistida com foco em uso
-                                real</span></li>
+                        <li><i data-lucide="monitor-smartphone"></i><span><strong>Suporte Especializado:</strong> Manutenção, redes e infraestrutura local</span></li>
+                        <li><i data-lucide="code-2"></i><span><strong>Desenvolvimento de Software:</strong> Sistemas verticais e sob medida</span></li>
+                        <li><i data-lucide="shield-check"></i><span><strong>Segurança & Estabilidade:</strong> Prevenção de falhas e monitoramento</span></li>
                     </ul>
                 </div>
             </div>
 
             <div class="container stats-grid">
                 <article class="stat surface-card">
+                    <strong>Atendimento rápido</strong>
+                    <span>Suporte ágil para não parar sua operação.</span>
+                </article>
+                <article class="stat surface-card">
                     <strong>1º programa em operacao</strong>
                     <span>PetWay em evolucao continua.</span>
                 </article>
                 <article class="stat surface-card">
-                    <strong>1 programa no pipeline</strong>
-                    <span>Produto ja definido para o próximo ciclo.</span>
-                </article>
-                <article class="stat surface-card">
-                    <strong>Arquitetura pronta para escalar</strong>
-                    <span>Padrão técnico replicável para novos mercados.</span>
+                    <strong>Arquitetura escalável</strong>
+                    <span>Infra e software prontos para crescer.</span>
                 </article>
             </div>
         </section>
+
+        <section class="section" id="sobre" style="background: rgba(15, 111, 255, 0.02); margin: 60px 0;">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Sobre a NEXUSWAY</span>
+                    <h2>Muito mais que suporte. Construímos o seu sucesso.</h2>
+                    <p style="max-width: 800px; margin: 0 auto;">Nascemos da necessidade de unir duas frentes que geralmente andam separadas nas empresas: a <strong>estabilidade dos computadores e redes (Suporte de TI)</strong> e a <strong>inteligência da gestão (Sistemas e Software)</strong>. <br><br>Na NEXUSWAY, você não precisa de várias empresas diferentes. Nós garantimos que seus equipamentos funcionem sem problemas e fornecemos os programas que organizam suas vendas, estoque e operação financeira.</p>
+                </div>
+            </div>
+            <div class="container differentials-grid" style="margin-top: 60px;">
+                <article class="diff-card surface-card">
+                    <i data-lucide="zap" width="28" height="28"></i>
+                    <span>Atendimento rápido</span>
+                </article>
+                <article class="diff-card surface-card">
+                    <i data-lucide="monitor-smartphone" width="28" height="28"></i>
+                    <span>Suporte remoto e presencial</span>
+                </article>
+                <article class="diff-card surface-card">
+                    <i data-lucide="microscope" width="28" height="28"></i>
+                    <span>Diagnóstico preciso</span>
+                </article>
+                <article class="diff-card surface-card">
+                    <i data-lucide="shield-check" width="28" height="28"></i>
+                    <span>Segurança digital</span>
+                </article>
+                <article class="diff-card surface-card">
+                    <i data-lucide="heart-handshake" width="28" height="28"></i>
+                    <span>Atendimento humanizado</span>
+                </article>
+                <article class="diff-card surface-card" style="border-color: rgba(15, 111, 255, 0.4); background: rgba(15, 111, 255, 0.04);">
+                    <i data-lucide="star" width="28" height="28" fill="var(--accent)"></i>
+                    <span>Prioridade para planos</span>
+                </article>
+            </div>
+        </section>
+
 
         <section class="section" id="programas">
             <div class="container">
@@ -179,7 +220,7 @@
                     </div>
                 </div>
 
-                <div class="pricing surface-card" id="planos">
+                <div class="pricing surface-card" id="planos-petway">
                     <h3>Planos PetWay</h3>
                     <div class="price-list">
                         <article class="price-item">
@@ -234,18 +275,223 @@
             </div>
         </section>
 
+        <section class="section" id="servicos">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Catálogo de Serviços de TI</span>
+                    <h2>Manutenção, redes e servidores</h2>
+                    <p>Resolva problemas técnicos de forma rápida e definitiva com nossos especialistas.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="car"></i>
+                        </div>
+                        <h3>Visita Técnica</h3>
+                        <div class="price">R$ 150</div>
+                    </article>
+                    
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="hard-drive"></i>
+                        </div>
+                        <h3>Formatação Completa</h3>
+                        <div class="price">R$ 120</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3>Limpeza/Otimização</h3>
+                        <div class="price">R$ 120</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="printer"></i>
+                        </div>
+                        <h3>Instalação de Impressora</h3>
+                        <div class="price">R$ 70</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="wifi"></i>
+                        </div>
+                        <h3>Configuração Wi-Fi</h3>
+                        <div class="price">R$ 100</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="database-backup"></i>
+                        </div>
+                        <h3>Backup de Dados</h3>
+                        <div class="price">R$ 120</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="bug-off"></i>
+                        </div>
+                        <h3>Remoção de Vírus</h3>
+                        <div class="price">R$ 150</div>
+                    </article>
+
+                    <article class="service-card surface-card">
+                        <div class="icon-wrapper">
+                            <i data-lucide="download"></i>
+                        </div>
+                        <h3>Instalação de Programas</h3>
+                        <div class="price">R$ 40</div>
+                    </article>
+
+                    <article class="service-card surface-card" style="grid-column: 1 / -1;">
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <div class="icon-wrapper" style="margin: 0;">
+                                <i data-lucide="server"></i>
+                            </div>
+                            <div>
+                                <h3>Configuração de Servidor</h3>
+                                <p style="color: var(--muted); font-size: 0.9rem; margin-top: 4px;">Implantação de redes e servidores empresariais</p>
+                            </div>
+                            <div class="price" style="margin-left: auto;">a partir de R$ 700</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="planos">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Planos Mensais</span>
+                    <h2>Suporte contínuo para sua empresa</h2>
+                    <p>Os planos da <strong>NEXUSWAY</strong> foram desenvolvidos para oferecer suporte contínuo, prevenção de problemas e prioridade no atendimento, garantindo mais estabilidade e segurança para seus equipamentos e sua empresa.</p>
+                </div>
+
+                <div class="plans-grid">
+                    <!-- Plano Básico -->
+                    <article class="plan-card surface-card">
+                        <h3>Plano Básico</h3>
+                        <p class="plan-target">Ideal para residências e pequenos usuários</p>
+                        <div class="plan-price">R$ 200<span>/mês</span></div>
+                        <div class="plan-cobertura">Até 3 computadores</div>
+                        
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle-2"></i> 1 manutenção preventiva mensal</li>
+                            <li><i data-lucide="check-circle-2"></i> Suporte técnico remoto</li>
+                            <li><i data-lucide="check-circle-2"></i> Diagnóstico de problemas</li>
+                            <li><i data-lucide="check-circle-2"></i> Otimização e limpeza básica</li>
+                            <li><i data-lucide="check-circle-2"></i> Auxílio em instalação de programas</li>
+                            <li><i data-lucide="check-circle-2"></i> Suporte para impressoras e Wi-Fi</li>
+                            <li><i data-lucide="check-circle-2"></i> Atendimento prioritário</li>
+                        </ul>
+
+                        <div class="plan-excluded">
+                            <h4>Não incluso</h4>
+                            <ul>
+                                <li>Troca de peças</li>
+                                <li>Serviços de servidor</li>
+                            </ul>
+                        </div>
+                        
+                        <a class="btn btn-ghost" style="margin-top: 24px;" href="https://wa.me/5567991413940?text=Olá,%20tenho%20interesse%20no%20Plano%20Básico%20de%20Suporte%20TI." target="_blank">Contratar</a>
+                    </article>
+
+                    <!-- Plano Profissional -->
+                    <article class="plan-card surface-card featured">
+                        <div class="plan-badge">Popular</div>
+                        <h3>Plano Profissional</h3>
+                        <p class="plan-target">Ideal para pequenos comércios e escritórios</p>
+                        <div class="plan-price">R$ 400<span>/mês</span></div>
+                        <div class="plan-cobertura">Até 6 computadores</div>
+                        
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle-2"></i> Manutenções periódicas</li>
+                            <li><i data-lucide="check-circle-2"></i> Suporte remoto ilimitado</li>
+                            <li><i data-lucide="check-circle-2"></i> Até 2 visitas presenciais</li>
+                            <li><i data-lucide="check-circle-2"></i> Backup e organização básica</li>
+                            <li><i data-lucide="check-circle-2"></i> Configuração de rede e Wi-Fi</li>
+                            <li><i data-lucide="check-circle-2"></i> Remoção de vírus e ameaças</li>
+                            <li><i data-lucide="check-circle-2"></i> Prioridade elevada</li>
+                        </ul>
+
+                        <div class="plan-excluded">
+                            <h4>Não incluso</h4>
+                            <ul>
+                                <li>Infraestrutura avançada</li>
+                                <li>Equipamentos e peças</li>
+                            </ul>
+                        </div>
+                        
+                        <a class="btn btn-primary" style="margin-top: 24px;" href="https://wa.me/5567991413940?text=Olá,%20tenho%20interesse%20no%20Plano%20Profissional%20de%20Suporte%20TI." target="_blank">Contratar</a>
+                    </article>
+
+                    <!-- Plano Empresarial -->
+                    <article class="plan-card surface-card">
+                        <h3>Plano Empresarial</h3>
+                        <p class="plan-target">Ideal para empresas e ambientes corporativos</p>
+                        <div class="plan-price">R$ 700<span>/mês</span></div>
+                        <div class="plan-cobertura">Até 15 computadores</div>
+                        
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle-2"></i> Suporte remoto e presencial</li>
+                            <li><i data-lucide="check-circle-2"></i> Monitoramento preventivo</li>
+                            <li><i data-lucide="check-circle-2"></i> Gerenciamento de rede</li>
+                            <li><i data-lucide="check-circle-2"></i> Suporte a servidores locais</li>
+                            <li><i data-lucide="check-circle-2"></i> Backup e organização de dados</li>
+                            <li><i data-lucide="check-circle-2"></i> Consultoria de infraestrutura</li>
+                            <li><i data-lucide="check-circle-2"></i> Atendimento diferenciado</li>
+                        </ul>
+
+                        <div class="plan-excluded">
+                            <h4>Não incluso</h4>
+                            <ul>
+                                <li>Venda de equipamentos</li>
+                                <li>Licenciamento de softwares</li>
+                            </ul>
+                        </div>
+                        
+                        <a class="btn btn-ghost" style="margin-top: 24px;" href="https://wa.me/5567991413940?text=Olá,%20tenho%20interesse%20no%20Plano%20Empresarial%20de%20Suporte%20TI." target="_blank">Contratar</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Diferencial</span>
+                    <h2>Benefícios dos Clientes de Plano</h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Menor risco de falhas</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Atendimento prioritário</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Redução de custos</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Maior estabilidade</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Mais produtividade</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Suporte contínuo</div>
+                    <div class="benefit-item"><i data-lucide="check-circle"></i> Segurança e prevenção</div>
+                </div>
+            </div>
+        </section>
+
+
+
         <section class="section" id="contato">
             <div class="container contact-grid">
                 <article class="surface-card contact-info">
                     <span class="eyebrow">Contato</span>
                     <h2>Vamos planejar seu proximo passo</h2>
-                    <p>Se voce quer implantar o PetWay agora ou acompanhar os proximos programas, fale direto com a
-                        equipe.</p>
+                    <p>Seja para contratar suporte de TI para sua empresa ou implantar nossos sistemas, fale direto com a equipe.</p>
                     <ul>
-                        <li><i data-lucide="mail"></i><span>contato@nexusway.com.br</span></li>
+                        <li><i data-lucide="mail"></i><span>gatewayx.tl@gmail.com</span></li>
                         <li><i data-lucide="message-circle"></i><span>(67) 9 9141-3940</span></li>
-                        <li><i data-lucide="map-pin"></i><span>Atendimento: Três Lagoas, Inocência, Brasilândia e
-                                Bataguassu (Remoto)</span></li>
+                        <li><i data-lucide="map-pin"></i><span><strong>Suporte de TI:</strong> Exclusivo para Três Lagoas - MS (Presencial)</span></li>
+                        <li><i data-lucide="globe"></i><span><strong>Sistemas (PetWay):</strong> Atendimento remoto para todo o Brasil</span></li>
                     </ul>
                 </article>
 
@@ -253,15 +499,16 @@
                     <h3>Solicitar contato via WhatsApp</h3>
                     <form id="nexusway-form">
                         <div class="field">
-                            <label for="product-select">Produto de interesse</label>
+                            <label for="product-select">Serviço de interesse</label>
                             <select id="product-select" name="produto" required>
-                                <option value="" disabled selected>Selecione o produto</option>
-                                <option value="PetWay">PetWay</option>
+                                <option value="" disabled selected>Selecione a área de interesse</option>
+                                <option value="Suporte de TI">Suporte de TI (Planos ou Avulso)</option>
+                                <option value="PetWay">Sistema PetWay</option>
                                 <option value="NEXUS COMMERCE" disabled>NEXUS COMMERCE (Em breve)</option>
                             </select>
                         </div>
 
-                        <div class="field">
+                        <div class="field" id="plan-field-wrapper">
                             <label for="plan-select">Plano de interesse</label>
                             <select id="plan-select" name="plano" required>
                                 <option value="" disabled selected>Selecione um plano</option>
@@ -269,6 +516,11 @@
                                 <option value="ANUAL">Plano Anual - R$ 1.980</option>
                                 <option value="PERMANENTE">Plano Permanente - R$ 7.000</option>
                             </select>
+                        </div>
+
+                        <div class="field" id="necessidade-field-wrapper" style="display: none;">
+                            <label for="necessidade-desc">Descreva sua necessidade</label>
+                            <textarea id="necessidade-desc" name="necessidade" placeholder="Ex: Preciso de manutenção em computadores, estruturação de rede, etc..." rows="3" style="width: 100%; border: 1px solid var(--line); border-radius: 11px; padding: 12px 14px; font-family: inherit; font-size: 1rem; color: var(--text); background: rgba(255, 255, 255, 0.78); resize: vertical;"></textarea>
                         </div>
 
                         <div class="field">
@@ -299,6 +551,7 @@
                                     <option value="Inocência/MS">Inocência/MS</option>
                                     <option value="Brasilândia/MS">Brasilândia/MS</option>
                                     <option value="Bataguassu/MS">Bataguassu/MS</option>
+                                    <option value="Outra cidade (Remoto)">Outra cidade (Remoto)</option>
                                 </select>
                             </div>
                         </div>

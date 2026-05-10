@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initProgramLightbox();
     initContactForm();
     updateFooterYear();
+    initPageTransitions();
+    initScrollReveal();
 });
 
 function initAmbientBackground() {
@@ -219,6 +221,49 @@ function initContactForm() {
     const form = document.getElementById('nexusway-form');
     if (!form) return;
 
+    const productSelect = document.getElementById('product-select');
+    const planWrapper = document.getElementById('plan-field-wrapper');
+    const planSelect = document.getElementById('plan-select');
+    const necWrapper = document.getElementById('necessidade-field-wrapper');
+    const necInput = document.getElementById('necessidade-desc');
+
+    if (productSelect) {
+        const citySelect = document.getElementById('city-select');
+        
+        productSelect.addEventListener('change', (e) => {
+            if (e.target.value === 'Suporte de TI') {
+                planWrapper.style.display = 'none';
+                planSelect.required = false;
+                planSelect.value = '';
+                
+                necWrapper.style.display = 'block';
+                necInput.required = true;
+
+                // Bloqueia cidade apenas para Três Lagoas
+                if (citySelect) {
+                    citySelect.value = 'Três Lagoas/MS';
+                    Array.from(citySelect.options).forEach(opt => {
+                        if (opt.value !== 'Três Lagoas/MS') opt.disabled = true;
+                    });
+                }
+            } else {
+                planWrapper.style.display = 'block';
+                planSelect.required = true;
+                
+                necWrapper.style.display = 'none';
+                necInput.required = false;
+                necInput.value = '';
+
+                // Libera todas as cidades para outros sistemas
+                if (citySelect) {
+                    Array.from(citySelect.options).forEach(opt => {
+                        opt.disabled = false;
+                    });
+                }
+            }
+        });
+    }
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -226,6 +271,7 @@ function initContactForm() {
         const data = {
             produto: formData.get('produto'),
             plano: formData.get('plano'),
+            necessidade: formData.get('necessidade'),
             nome: formData.get('nome'),
             comercio: formData.get('comercio'),
             endereco: formData.get('endereco'),
@@ -233,8 +279,15 @@ function initContactForm() {
             whatsapp: formData.get('whatsapp')
         };
 
+        let firstLine = '';
+        if (data.produto === 'Suporte de TI') {
+            firstLine = `Olá, tenho interesse em ${data.produto}.\nNecessidade: ${data.necessidade}`;
+        } else {
+            firstLine = `Olá, tenho interesse no ${data.produto} (${data.plano}).`;
+        }
+
         const message = [
-            `Ola, tenho interesse no ${data.produto} (${data.plano}).`,
+            firstLine,
             `Nome: ${data.nome}`,
             `Comercio: ${data.comercio}`,
             `Endereco: ${data.endereco}`,
@@ -252,4 +305,69 @@ function updateFooterYear() {
     const yearEl = document.getElementById('year');
     if (!yearEl) return;
     yearEl.textContent = String(new Date().getFullYear());
+}
+
+function initPageTransitions() {
+    const links = document.querySelectorAll('a[href]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            const target = link.getAttribute('href');
+            
+            // Ignora links com target="_blank" ou links de ancoragem pura ou links vazios
+            if (link.target === '_blank' || target.startsWith('#') || target.startsWith('mailto:') || target.startsWith('tel:')) return;
+            
+            // Só faz transição de página se o destino não for a mesma página
+            if (target && target !== window.location.pathname && target !== window.location.href) {
+                e.preventDefault();
+                document.body.classList.add('page-transitioning');
+                
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 300); // 300ms matches css transition
+            }
+        });
+    });
+
+    // Handle back/forward cache to ensure opacity is restored
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-transitioning');
+        }
+    });
+}
+
+function initScrollReveal() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply scroll-reveal dynamically to main elements
+    const elementsToReveal = document.querySelectorAll('.surface-card, .section-head, .stat, .diff-card, .service-card, .roadmap-step, .price-item, .hero-grid > div');
+    
+    elementsToReveal.forEach((el, index) => {
+        el.classList.add('scroll-reveal');
+        
+        // Add staggered delay to siblings
+        if (el.parentNode) {
+            const siblings = Array.from(el.parentNode.children).filter(child => child.classList.contains('scroll-reveal'));
+            const idx = siblings.indexOf(el);
+            if (idx > 0) {
+                el.style.transitionDelay = `${idx * 100}ms`;
+            }
+        }
+        
+        observer.observe(el);
+    });
 }
